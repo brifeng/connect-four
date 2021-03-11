@@ -80,7 +80,8 @@ const placeInTable = (y, x) => {
 /** endGame: announce game end */
 const endGame = (msg) => {
     // TODO: pop up alert message
-    alert(msg);
+
+    setTimeout(() => alert(msg), 1250);
 }
 
 /** handleClick: handle click of column top to play piece */
@@ -107,7 +108,7 @@ function handleClick(evt) {
     // check for tie
     // TODO: check if all cells in board are filled; if so call, call endGame
     if (checkForTie()) {
-        return endGame(`draw`);
+        return endGame("It's a draw!");
     }
 
     // switch players
